@@ -1,0 +1,16 @@
+{
+  "app":{
+    "nav_link_home" : "Home",
+    "nav_link_about" : "About",
+    "welcome" : "Welcome to Your Vue.js App"
+  },
+  "helloWorld":{
+    "intro": "For a guide and recipes on how to configure / customize this project check out the",
+    "plugins": "Installed CLI Plugins",
+    "links": "Essential Links",
+    "eco": "Ecosystem"
+  },
+  "about":{
+    "title": "This is an about page"
+  }
+}

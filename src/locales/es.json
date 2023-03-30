@@ -1,0 +1,16 @@
+{
+  "app":{
+    "nav_link_home" : "Inicio",
+    "nav_link_about" : "Quien Somos?",
+    "welcome" : "Bienvenido a tu aplicacion Vue.js"
+  },
+   "helloWorld":{
+    "intro": "Para obtener una guía y recetas sobre cómo configurar/personalizar este proyecto, consulte el",
+    "plugins": "Plugins CLI instalados",
+    "links": "Links Esenciales",
+    "eco": "Ecosystema"
+  },
+   "about":{
+    "title": "Esta es la pagina Quien Somos?"
+  }
+}
