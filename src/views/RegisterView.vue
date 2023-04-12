@@ -47,11 +47,19 @@ export default {
   },
   methods: {
     async signup() {
+      if (!this.validateEmail(this.email)) {
+        alert("Email not valid");
+        return;
+      }
       var dades = {
         email: this.email,
       };
       await axios
-        .post("http://localhost:5000/api/register ", dades)
+        .post("http://localhost:5000/api/register ", dades, {
+          // headers: {
+          //   token: localStorage.getItem("FlsKTkn"),
+          // },
+        })
         .then((r) => {
           this.token = r.data;
           //save token in localstorage and redirect to init
@@ -59,6 +67,11 @@ export default {
           this.$router.push("/init?token=" + this.token);
         })
         .catch((error) => console.log(error));
+    },
+    //use regex to validate email
+    validateEmail(email) {
+      var re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      return re.test(email);
     },
   },
   mounted() {},

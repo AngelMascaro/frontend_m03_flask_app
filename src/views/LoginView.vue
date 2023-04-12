@@ -59,7 +59,6 @@ export default {
           "http://localhost:5000/api/login ", dades
         )
         .then((r) => {
-          // console.log(r)
           this.loginvuex(dades, r.data)
           this.$router.push({ name: 'verify', params: { token: r.data } });
         })

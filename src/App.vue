@@ -4,18 +4,14 @@
     <router-link v-if="user.userState.loggedIn === false" to="/init">Init</router-link> |
     <router-link v-if="user.userState.loggedIn === false" to="/login">Login</router-link> |
     <router-link v-if="user.userState.loggedIn === false" to="/verify">Verify</router-link> |
-    <!-- <div  class="iconLogged d-flex flex-column-reverse justify-content-end">
-      <button @click="logoutvuex">LOGOUT</button>
-      <p> {{ user.userState.user }} </p>
-      <i class="bi bi-person-circle"></i>
-    </div> -->
-    <div class="btn-group iconLogged">
+    <router-link v-if="user.userState.loggedIn === false" to="/about">About</router-link> |
+    <div  v-if="user.userState.loggedIn === true"  class="btn-group iconLogged">
       <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         {{ user.userState.user }}
         <i class="bi bi-person-circle"></i>
       </button>
       <ul class="dropdown-menu">
-        <li v-if="user.userState.loggedIn === true"><a @click="logoutvuex" class="dropdown-item" href="#">Logout</a></li>
+        <li><a @click="logoutvuex" class="dropdown-item" href="#">Logout</a></li>
         <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
         <li><a class="dropdown-item" href="#">Something else here</a></li>
         <li><hr class="dropdown-divider"></li>
@@ -61,7 +57,6 @@ export default {
   position: absolute;
   font-family: Avenir, Helvetica, Arial, sans-serif;
 	width: 100%;
-	// background-image: url("https://dsqqu7oxq6o1v.cloudfront.net/preview-820138-EdlIREApd9-high.mp4");
   min-height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -107,6 +102,6 @@ p{
   position: absolute;
   right: 10px;
   top: 10px;
-  // font-size: 25px;
+  font-size: 25px;
 }
 </style>
