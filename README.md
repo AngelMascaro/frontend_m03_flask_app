@@ -1,4 +1,4 @@
-# initial_Vue3_base_template
+# Frontend for flask app g1 deploy
 
 -This is a base template for Vue3 projects. It includes the following:
 
